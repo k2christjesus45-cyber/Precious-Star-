@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Precious Star | IT, Design & Healthcare Solutions</title>
+
+<meta name="description" content="Precious Star provides software development, digital marketing, graphic design, interior and exterior design, AutoCAD, medical coding, medical billing and healthcare RCM services.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:#222;
+    line-height:1.6;
+}
+
+:root{
+    --gold:#c9a227;
+    --dark-gold:#9b7710;
+    --red:#b51f2b;
+    --dark:#171717;
+    --light:#faf8f2;
+    --border:#eee5c8;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--border);
+    box-shadow:0 2px 15px rgba(0,0,0,.06);
+}
+
+.nav{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+}
+
+.logo-star{
+    width:42px;
+    height:42px;
+    border:2px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold);
+    font-size:23px;
+}
+
+.logo-text{
+    font-size:21px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#222;
+}
+
+.logo-text span{
+    color:var(--gold);
+}
+
+nav{
+    display:flex;
+    gap:24px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+.menu{
+    display:none;
+    font-size:27px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    background:
+    radial-gradient(circle at 85% 25%, rgba(201,162,39,.16), transparent 30%),
+    linear-gradient(135deg,#fff 0%,#faf8f2 100%);
+}
+
+.hero-content{
+    max-width:800px;
+    padding:80px 0;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 16px;
+    border:1px solid var(--gold);
+    border-radius:30px;
+    color:var(--dark-gold);
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,76px);
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero h2{
+    font-size:clamp(20px,3vw,30px);
+    font-weight:500;
+    margin-bottom:18px;
+}
+
+.hero p{
+    max-width:700px;
+    color:#666;
+    font-size:17px;
+    margin-bottom:32px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:white;
+}
+
+.btn-gold:hover{
+    background:var(--dark-gold);
+}
+
+.btn-outline{
+    border:1px solid var(--gold);
+    color:var(--dark-gold);
+}
+
+.btn-outline:hover{
+    background:var(--gold);
+    color:white;
+}
+
+/* SECTION */
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title .small{
+    color:var(--gold);
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin:8px 0 12px;
+}
+
+.section-title p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-box{
+    padding:35px;
+    background:var(--light);
+    border-left:4px solid var(--gold);
+}
+
+.about-box h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.about-box p{
+    color:#666;
+}
+
+.highlights{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.highlight{
+    padding:22px;
+    border:1px solid var(--border);
+    border-radius:8px;
+}
+
+.highlight strong{
+    display:block;
+    color:var(--gold);
+    font-size:25px;
+}
+
+/* SERVICES */
+
+.services{
+    background:#fafafa;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.service-card{
+    background:white;
+    padding:30px;
+    border:1px solid #eee;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    border-color:var(--gold);
+}
+
+.icon{
+    width:54px;
+    height:54px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    background:#fff8df;
+    color:var(--gold);
+    font-size:25px;
+    margin-bottom:18px;
+}
+
+.service-card h3{
+    font-size:22px;
+    margin-bottom:14px;
+}
+
+.service-card p{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.service-card ul{
+    list-style:none;
+}
+
+.service-card li{
+    padding:5px 0;
+    color:#555;
+}
+
+.service-card li::before{
+    content:"✦";
+    color:var(--gold);
+    margin-right:8px;
+}
+
+/* PROCESS */
+
+.process{
+    background:white;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-card{
+    text-align:center;
+    padding:25px 15px;
+}
+
+.number{
+    width:55px;
+    height:55px;
+    border:2px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    color:var(--gold);
+    font-weight:bold;
+    font-size:20px;
+}
+
+/* WHY */
+
+.why{
+    background:var(--light);
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.why-card{
+    background:white;
+    padding:30px;
+    border-radius:8px;
+}
+
+.why-card h3{
+    margin:12px 0 8px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#171717;
+    color:white;
+}
+
+.contact .section-title p{
+    color:#bbb;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info{
+    padding:30px;
+    border:1px solid #333;
+    border-radius:10px;
+}
+
+.contact-item{
+    margin-bottom:22px;
+}
+
+.contact-item span{
+    color:var(--gold);
+    font-weight:bold;
+    display:block;
+    margin-bottom:4px;
+}
+
+.contact-item a{
+    color:white;
+    text-decoration:none;
+}
+
+.contact-form{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    font-family:inherit;
+}
+
+.contact-form textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0e0e0e;
+    color:#aaa;
+    text-align:center;
+    padding:25px 15px;
+    font-size:13px;
+}
+
+footer strong{
+    color:var(--gold);
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero{
+        min-height:auto;
+    }
+
+    .hero-content{
+        padding:70px 0;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 0;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+    }
+
+    .highlights{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="#home" class="logo">
+<div class="logo-star">★</div>
+<div class="logo-text">PRECIOUS <span>STAR</span></div>
+</a>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="menu">☰</div>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+
+<div class="badge">INNOVATION • DESIGN • TECHNOLOGY</div>
+
+<h1>PRECIOUS <span>STAR</span></h1>
+
+<h2>Technology, Creative Design & Healthcare Solutions</h2>
+
+<p>
+We provide reliable, secure and scalable solutions across
+software development, digital marketing, graphic design,
+interior & exterior design, AutoCAD and healthcare services.
+</p>
+
+<div class="buttons">
+<a href="#services" class="btn btn-gold">Explore Services</a>
+<a href="#contact" class="btn btn-outline">Contact Us</a>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+<div class="container">
+
+<div class="section-title">
+<div class="small">Who We Are</div>
+<h2>About Precious Star</h2>
+<p>One company. Multiple professional solutions.</p>
+</div>
+
+<div class="about-grid">
+
+<div class="about-box">
+<h3>Building Ideas Into Reality</h3>
+<p>
+Precious Star delivers technology, digital, creative,
+architectural and healthcare support services for
+individuals, businesses and organizations.
+</p>
+<br>
+<p>
+Our approach focuses on quality, reliability, security,
+creative thinking and scalable solutions.
+</p>
+</div>
+
+<div class="highlights">
+
+<div class="highlight">
+<strong>IT</strong>
+Software & Web Solutions
+</div>
+
+<div class="highlight">
+<strong>ADS</strong>
+Google & Meta Marketing
+</div>
+
+<div class="highlight">
+<strong>3D</strong>
+Creative Visualization
+</div>
+
+<div class="highlight">
+<strong>RCM</strong>
+Healthcare Solutions
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+<div class="container">
+
+<div class="section-title">
+<div class="small">What We Do</div>
+<h2>Our Services</h2>
+<p>Professional solutions designed around your requirements.</p>
+</div>
+
+<div class="service-grid">
+
+
+<!-- SOFTWARE -->
+
+<div class="service-card">
+<div class="icon">💻</div>
+<h3>Software Development</h3>
+<p>Custom technology solutions for modern businesses.</p>
+<ul>
+<li>Website Development</li>
+<li>Web Applications</li>
+<li>Mobile App Development</li>
+<li>Custom Software Development</li>
+<li>Business & Management Software</li>
+<li>E-Commerce Development</li>
+<li>UI/UX Design</li>
+<li>Database & API Integration</li>
+<li>Cloud & Hosting Solutions</li>
+<li>Software Maintenance & Support</li>
+</ul>
+</div>
+
+
+<!-- DIGITAL MARKETING -->
+
+<div class="service-card">
+<div class="icon">📈</div>
+<h3>Digital Marketing</h3>
+<p>Grow your online presence and reach the right audience.</p>
+<ul>
+<li>Google Ads</li>
+<li>Meta Ads – Facebook & Instagram</li>
+<li>Search Engine Optimization (SEO)</li>
+<li>Social Media Marketing</li>
+<li>Social Media Management</li>
+<li>Google Business Profile</li>
+<li>Lead Generation</li>
+<li>Digital Marketing Strategy</li>
+</ul>
+</div>
+
+
+<!-- GRAPHIC -->
+
+<div class="service-card">
+<div class="icon">🎨</div>
+<h3>Graphic & 3D Design</h3>
+<p>Creative and realistic visual solutions for brands and products.</p>
+<ul>
+<li>Logo Design</li>
+<li>Brand Identity</li>
+<li>2D Graphic Design</li>
+<li>3D Realistic Design</li>
+<li>Jewellery Design</li>
+<li>Stone & Gem Product Design</li>
+<li>Product Visualization</li>
+<li>Packaging Design</li>
+<li>Brochure & Poster Design</li>
+<li>Social Media Creatives</li>
+</ul>
+</div>
+
+
+<!-- ARCHITECTURE -->
+
+<div class="service-card">
+<div class="icon">🏠</div>
+<h3>Interior & Exterior Design</h3>
+<p>Professional architectural visualization and drafting services.</p>
+<ul>
+<li>Interior Design</li>
+<li>Exterior Design</li>
+<li>Residential Design</li>
+<li>Commercial Design</li>
+<li>Office Design</li>
+<li>2D Floor Plans</li>
+<li>3D Realistic Visualization</li>
+<li>AutoCAD Drafting</li>
+<li>Furniture Design</li>
+<li>Elevation Design</li>
+</ul>
+</div>
+
+
+<!-- HEALTHCARE -->
+
+<div class="service-card">
+<div class="icon">🏥</div>
+<h3>Healthcare & Medical Billing</h3>
+<p>Healthcare administrative and revenue cycle support.</p>
+<ul>
+<li>Medical Billing</li>
+<li>Medical Coding</li>
+<li>Claims Processing</li>
+<li>Claims Submission</li>
+<li>Insurance Verification</li>
+<li>Eligibility Verification</li>
+<li>Payment Posting</li>
+<li>AR Management</li>
+<li>Denial Management</li>
+<li>Revenue Cycle Management (RCM)</li>
+</ul>
+</div>
+
+
+<!-- SUPPORT -->
+
+<div class="service-card">
+<div class="icon">⚙</div>
+<h3>Maintenance & Support</h3>
+<p>Continuous support to keep your digital solutions running smoothly.</p>
+<ul>
+<li>Website Maintenance</li>
+<li>Application Support</li>
+<li>Bug Fixing</li>
+<li>Content Updates</li>
+<li>Security Updates</li>
+<li>Performance Optimization</li>
+<li>Technical Support</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process" id="process">
+<div class="container">
+
+<div class="section-title">
+<div class="small">How We Work</div>
+<h2>Our Process</h2>
+<p>A simple and transparent approach from idea to delivery.</p>
+</div>
+
+<div class="process-grid">
+
+<div class="process-card">
+<div class="number">01</div>
+<h3>Understand</h3>
+<p>We understand your requirements and goals.</p>
+</div>
+
+<div class="process-card">
+<div class="number">02</div>
+<h3>Plan</h3>
+<p>We create a suitable solution and project plan.</p>
+</div>
+
+<div class="process-card">
+<div class="number">03</div>
+<h3>Build</h3>
+<p>Our team develops and designs the solution.</p>
+</div>
+
+<div class="process-card">
+<div class="number">04</div>
+<h3>Deliver</h3>
+<p>We deliver, support and maintain your solution.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- WHY US -->
+
+<section class="why">
+<div class="container">
+
+<div class="section-title">
+<div class="small">Why Precious Star</div>
+<h2>Our Approach</h2>
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+<h3>✦ Quality Focus</h3>
+<p>We focus on delivering professional and practical solutions.</p>
+</div>
+
+<div class="why-card">
+<h3>✦ Secure Solutions</h3>
+<p>Security and responsible handling of business information are important to us.</p>
+</div>
+
+<div class="why-card">
+<h3>✦ Scalable Services</h3>
+<p>Solutions can be designed to grow with your business requirements.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+<div class="container">
+
+<div class="section-title">
+<div class="small">Get In Touch</div>
+<h2>Let's Work Together</h2>
+<p>Tell us about your project or service requirement.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<div class="contact-item">
+<span>Company</span>
+Precious Star
+</div>
+
+<div class="contact-item">
+<span>Phone</span>
+<a href="tel:+919999999999">+91 XXXXXXXXXX</a>
+</div>
+
+<div class="contact-item">
+<span>Email</span>
+<a href="mailto:info@preciousstar.com">info@preciousstar.com</a>
+</div>
+
+<div class="contact-item">
+<span>WhatsApp</span>
+<a href="https://wa.me/919999999999">Chat With Us</a>
+</div>
+
+<div class="contact-item">
+<span>Location</span>
+Your Business Location
+</div>
+
+</div>
+
+<div class="contact-form">
+
+<form onsubmit="sendMessage(event)">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<input type="text" id="service" placeholder="Service Required">
+
+<textarea id="message" placeholder="Tell us about your requirement"></textarea>
+
+<button type="submit" class="btn btn-gold">
+Send Enquiry
+</button>
+
+</form>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<footer>
+<p>© 2026 <strong>Precious Star</strong>. All Rights Reserved.</p>
+<p>IT Solutions • Creative Design • Architecture • Healthcare</p>
+</footer>
+
+
+<script>
+function sendMessage(event){
+
+event.preventDefault();
+
+let name=document.getElementById("name").value;
+let service=document.getElementById("service").value;
+let message=document.getElementById("message").value;
+
+let phone="919999999999";
+
+let text=
+"Hello Precious Star,%0A%0A"+
+"Name: "+name+"%0A"+
+"Service: "+service+"%0A"+
+"Requirement: "+message;
+
+window.open("https://wa.me/"+phone+"?text="+text,"_blank");
+
+}
+</script>
+
+</body>
+  </html>
